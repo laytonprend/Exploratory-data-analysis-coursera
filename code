@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+
+data=pd.read_csv('Banknote Authentication dataset.csv')
+print('mean ',data.mean())
+print('standard deviation ',data.std())
+print('max values ',data.max())
+print('min values ',data.min())
+print('range', data.max()-data.min() )
+
+plt.xlabel('V1')
+plt.ylabel('V2')
+plt.scatter(data['V1'],data['V2'])
+plt.show()
+print('2 continuous data types is suitable for kmeans, clear clusters have also formed')
+print('data set scales are different range of 14 compared to 26 so a standardiser would be appropriate')
